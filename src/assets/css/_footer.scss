@@ -1,0 +1,149 @@
+footer.page-footer {
+	background-color: #333030;
+	box-shadow: 0 2px 10px #000;
+	position: relative;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.logo-footer {
+			height: 1.6rem;
+			img {
+				max-height: 100%;
+				margin-left: auto;
+			}
+		}
+	}
+}
+ul.social-networks {
+	margin: 1rem auto 0 auto;
+	li {
+		position: relative;
+		display: inline-block;
+		color: #666;
+		font-size: 18px;
+		height: 40px;
+		width: 40px;
+		background: #242020;
+		line-height: 40px;
+		border-radius: 50%;
+		margin: 0 6px;
+		cursor: pointer;
+		transition: 0.5s;
+
+		a {
+			color: #999;
+			transition: 0.4s;
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			height: inherit;
+			width: inherit;
+			/* background: #d35400; */
+			border-radius: 50%;
+			transform: scale(0.9);
+			z-index: -1;
+			transition: 0.5s;
+		}
+		&:hover:before {
+			filter: blur(3px);
+			transform: scale(1.2);
+			/* box-shadow: 0 0 15px #d35400; */
+		}
+		&.btn-fb {
+			&:before {
+				background: #4267b2;
+			}
+			&:hover:before {
+				box-shadow: 0 0 15px #4267b2;
+			}
+			&:hover {
+				a {
+					color: #456cba;
+				}
+				box-shadow: 0 0 15px #4267b2;
+				text-shadow: 0 0 15px #4267b2;
+			}
+		}
+		&.btn-tw {
+			&:before {
+				background: #1da1f2;
+			}
+			&:hover:before {
+				box-shadow: 0 0 15px #1da1f2;
+			}
+			&:hover {
+				a {
+					color: #26a4f2;
+				}
+				box-shadow: 0 0 15px #1da1f2;
+				text-shadow: 0 0 15px #1da1f2;
+			}
+		}
+		&.btn-ig {
+			&:before {
+				background: #e1306c;
+			}
+			&:hover:before {
+				box-shadow: 0 0 15px #e1306c;
+			}
+			&:hover {
+				a {
+					color: #e23670;
+				}
+				box-shadow: 0 0 15px #e1306c;
+				text-shadow: 0 0 15px #e1306c;
+			}
+		}
+		&.btn-ln {
+			&:before {
+				background: #2867b2;
+			}
+			&:hover:before {
+				box-shadow: 0 0 15px #2867b2;
+			}
+			&:hover {
+				a {
+					color: #2a6cbb;
+				}
+				box-shadow: 0 0 15px #2867b2;
+				text-shadow: 0 0 15px #2867b2;
+			}
+		}
+		&.btn-yt {
+			&:before {
+				background: #ff0000;
+			}
+			&:hover:before {
+				box-shadow: 0 0 15px #ff0000;
+			}
+			&:hover {
+				a {
+					color: #ff1a1a;
+				}
+				box-shadow: 0 0 15px #ff0000;
+				text-shadow: 0 0 15px #ff0000;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	footer.page-footer {
+		.logo-footer,
+		.footer-copyright {
+			flex-basis: auto;
+		}
+		ul.social-networks {
+			margin: 0;
+		}
+	}
+	ul.social-networks li {
+		margin: 0 14px;
+	}
+}

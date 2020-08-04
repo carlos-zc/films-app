@@ -1,0 +1,69 @@
+// Colores
+$imdb-color: #ff9900;
+$rotten-color: #ff0022;
+
+.circular-progress {
+	position: relative;
+	width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    .number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        h4 {
+            margin-bottom: 0;
+            &.percent {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            &.rate-web {
+                font-size: .7rem;
+                color: #bbb;
+            }
+        }
+    }
+	svg {
+        width: 80px;
+        height: 80px;
+		circle {
+			width: 100%;
+			height: 100%;
+			fill: none;
+			stroke: #383838;
+			stroke-width: 7;
+            transform: translate(4px, 4px);
+            transition: .1s all;
+			&:nth-child(2) {
+				stroke-dasharray: 225;
+				stroke-dashoffset: 225;
+			}
+		}
+    }
+    &:hover svg circle {
+        stroke-width: 4;
+    }
+	&.imdb {
+		svg circle:nth-child(2) {
+			stroke: $imdb-color;
+        }
+        &:hover h4.percent {
+            color: $imdb-color;
+        }
+	}
+	&.rotten {
+		svg circle:nth-child(2) {
+			stroke: $rotten-color;
+        }
+        &:hover h4.percent {
+            color: $rotten-color;
+        }
+	}
+}

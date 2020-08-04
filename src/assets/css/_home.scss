@@ -1,0 +1,54 @@
+// Title Font
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+// HOME
+.home {
+	display: flex;
+	align-items: center;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		// background-color: rgba(black , .3);
+		background-image: linear-gradient($color-primary, $color-secondary);
+		opacity: 0.35;
+	}
+}
+// Searcher
+.search-content {
+	position: relative;
+	width: 40rem !important;
+	// text-align: center;
+	h1,
+	p.subtitle {
+		font-family: 'Francois One', sans-serif;
+		text-transform: uppercase;
+		// color: transparent;
+		// background-image: linear-gradient($color-primary, #df5d3d);
+		// background-clip: text;
+	}
+	h1 {
+		text-align: center;
+		font-size: 3.6rem;
+		.app-title {
+			color: transparent;
+			background-image: linear-gradient(#196cb1, #9bcefd);
+			background-clip: text;
+		}
+	}
+	p.subtitle {
+		font-size: 1.2rem;
+		.typed {
+			color: #7ee5ff;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.search-content p.subtitle {
+		font-size: 1.8rem;
+	}
+}

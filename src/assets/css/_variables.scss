@@ -1,0 +1,13 @@
+// VARIABLES
+$color-primary: #d40023;
+$color-secondary: #3273c9;
+$color-grey: #aaa;
+
+// MIXINS
+@mixin vendorize($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
