@@ -16,14 +16,14 @@ const Card = ({movie}) => {
     // };
     
     return (
-        <div className="card">
+        <article className="card">
             <img src={image} alt={movie.Title} className="card-img-top" width="100" />
             <div className="info">
                 <h4>{movie.Title} ({movie.Year})</h4>
                 <p>{movie.Type}</p>
                 <Link to={"/film/" + movie.imdbID} className="btn btn-secondary">Show more</Link>
             </div>
-        </div>
+        </article>
     )
 }
 

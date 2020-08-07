@@ -26,7 +26,7 @@ main.contact {
     }
     .contact-form {
         background-color: rgba(#383030, .9);
-        padding: 2rem;
+        padding: 1.6rem;
         border-radius: 3px;
         box-shadow: 0 5px 8px black;
         .form-group {
@@ -108,6 +108,9 @@ main.contact {
 
 @media only screen and (min-width: 768px) {
     main.contact {
+        .contact-form {
+            padding: 2rem;
+        }
         .message {
             margin-top: 0;
         }
